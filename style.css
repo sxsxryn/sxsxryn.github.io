@@ -70,18 +70,23 @@ ul {
     display: flex;
     justify-content: space-around;
 }
+
 .header-person{
     position: relative;
     bottom: 0;  
-    margin-top: auto;
-    
+    margin-top: auto;   
 }
+
 .header-img {
     width: 40em;
     height: fit-content;
     position: relative;
     z-index: 2;
     bottom: -4px;
+    transition: all 500ms ease-in-out;
+}
+.header-img:hover {
+    width: 45em;
 }
 
 .header-text {
@@ -91,6 +96,7 @@ ul {
     padding-bottom: 2rem;
     position: relative;
 }
+
 .text-light {
     position: relative;
     color: var(--first-color);
@@ -99,33 +105,39 @@ ul {
     font-size: 2.5rem;
     line-height: 2;
 }
+
 .header-h2 {
     line-height: .5;
     color: var(--first-color);
 }
+
 .header-h2:first-child {
     position: relative;
     left: -50px;
 }
+
 .header-h2:last-child {
     position: relative;
     left: 50px;
     bottom: 0.15em;
 }   
+
 .rectangle-text {
     background-color: var(--first-color);
     mix-blend-mode: difference;
     position: absolute;
-    right: 0;
+    right: -5px;
     bottom: 0;
-    width: 3em;
+    width: 3.2em;
     height: 1.5em;
     z-index: 8;
     transition: all 0.5s ease-in-out;
 }
+
 .rectangle-text:hover {
-    width: 6.5em;
+    width: 6.6em;
 }
+
 .rectangle1 {
     background-color: var(--first-color);
     width: 430px;
@@ -135,8 +147,8 @@ ul {
     z-index: 1;
     top: 30px;
     left: -30px;
-
 }
+
 .rectangle2 {
     width: 350px;
     height: 350px;
@@ -157,7 +169,13 @@ ul {
     bottom: 0;
     left: 3em;
     filter: blur(7rem);
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
+/* ABOUT ME */
+
 .aboutme {
     width: 100%;
     height: 90vh;
@@ -165,14 +183,6 @@ ul {
     position: relative;
 }
 
-.fs-rectangle1 {
-    position: absolute;
-    height: 50em;
-    width: 10em;
-    z-index: 8;
-    rotate: -45deg;
-    border-radius: 0 0 50% 50%;
-}
 .aboutme-bg {
     position: absolute;
     display: flex;
@@ -180,51 +190,210 @@ ul {
     width: 100%;
     left: 0;
 }
+
 .aboutme-bg h2 {
     color: var(--bg-color);
     font-weight: 800;
     font-size: 9rem;
     position: absolute;
-    left: -45%;
+    left: -47%;
     display: flex;
     justify-content: center;
     top: 17.5vw;
     width: 100%;
     transform: rotate(-90deg);
 }
+
 .aboutme-content {
-    height: 80vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .profile-pic img {
     position: relative;
-    height: 30rem;
+    height: 500px;
     aspect-ratio: 1;
 }
 .profile-pic div {
     background-color: var(--first-color);
     position: relative;
-    left: 175px;
+    left: 150px;
     top: -40px;
     width: fit-content;
     padding: 5px 35px;  
 }
+
 .profile-pic div h2 {
     color: var(--bg-color);
     font-size: 3rem;
     font-weight: 800;
 }
+.aboutme-text {
+    margin-left: 5em;
+    width: 40rem;
+
+}
+
 .aboutme-text h2 {
     color: var(--first-color);
     font-style: italic;
-    font-size: 4rem;
+    font-weight: bold;
+    font-size: 4em;
 }
+
 .aboutme-text p {
+    position: relative;
+    margin-top: 1em;
     color: var(--white-color);
-    width: 40vw;
+    font-size: 1.4em;
+    z-index: 2;
 }
+
 .first-color {
     color: var(--first-color);
+    font-size: 1em;
+}
+
+.aboutme-text .rectangle {
+    position: absolute;
+    background-color: var(--first-color);
+    width: 60px;
+    height: 250px;
+    top: 250px;
+    right: 550px;
+    z-index: 1;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-press {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+}
+
+.skills-press h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: 10px;
+    color: var(--first-color);
+}
+
+.skills-press img {
+    margin-bottom: 30px;
+    width: 50px;
+}
+.skills-press img:hover {
+    animation: rotate3d;
+    animation-duration: 1s;
+}
+
+/* SOCIALS */
+
+.socials {
+    width: 100%;
+    height: 90vh;
+    background-color: var(--bg-color);
+}
+
+.socials-bg h2 {
+    color: var(--first-color);
+    opacity: 0.2;
+    font-weight: 800;
+    font-size: 10rem;
+    position: relative;
+    top: 2.1em;
+    left: -2.3em;
+    width: fit-content;
+    transform: rotate(-90deg);
+    letter-spacing: -10px;
+}
+
+.socials-content {
+    position: relative;
+    top: -5em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials-content h2 {
+    font-weight: 400;
+    font-size: 2.3em;
+    letter-spacing: 0.5em;
+    color: var(--first-color);
+}
+
+.social a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.social h3 {
+    font-weight: 400;
+    color: var(--white-color);
+    margin-left: 0.7em;
+    font-size: 2em;
+}
+
+.social img {
+    aspect-ratio: 1;
+    width: 3em;
+}
+
+.socials-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    height: 50px;
+    width: 350px;
+    margin: 5em 0em;
+    background-color: var(--first-color);
+}
+
+.socials-text h2 {
+    font-size: 1.3em;
+    letter-spacing: 1em;
+    color: var(--bg-color);
+}
+
+/* KEYFRAMES */
+
+@keyframes pulse {
+    0% { 
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% { 
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate3d {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
