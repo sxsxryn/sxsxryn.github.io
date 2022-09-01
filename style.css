@@ -54,7 +54,8 @@ ul li a:hover{
 }
 li {
     list-style-type: none;
-    margin: 0 2.5rem;
+    margin: 0 1 .5rem;
+    padding: 0 2rem;
 }
 ul {
     display: flex;
@@ -140,13 +141,12 @@ ul {
 
 .rectangle1 {
     background-color: var(--first-color);
-    width: 430px;
-    height: 430px;
+    width: 230px;
+    height: 230px;
     border: 10px, solid, var(--first-color);
     position: absolute;
     z-index: 1;
-    top: 30px;
-    left: -30px;
+    margin: 5rem 0 0 4rem;
 }
 
 .rectangle2 {
@@ -205,14 +205,15 @@ ul {
 }
 
 .aboutme-content {
-    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 90vh;
 }
 
 .profile-pic img {
     position: relative;
+    z-index: ;
     height: 500px;
     aspect-ratio: 1;
 }
@@ -249,6 +250,10 @@ ul {
     color: var(--white-color);
     font-size: 1.4em;
     z-index: 2;
+}
+
+.aboutme-text :nth-child(3) {
+    font-size: 1em;
 }
 
 .first-color {
@@ -334,6 +339,7 @@ ul {
 }
 
 .socials-content h2 {
+    text-align: center;
     font-weight: 400;
     font-size: 2.3em;
     letter-spacing: 0.5em;
@@ -396,4 +402,147 @@ ul {
     100% {
         transform: rotateZ(360deg);
     }
+}
+
+/* RESPONSIVE  */
+
+@media only screen and (max-width:1080px) {
+    * {
+        width: fit-content;
+    }
+    .profile-pic img {
+        margin-top: 2rem;
+        height: 12rem;   
+        left: 0;
+        top: 0;
+        
+    }
+    .navbar {
+        position: relative;
+        flex-direction: column;
+        width: auto;
+    }
+    .logo {
+        margin: 1rem;
+    }
+    ul {
+        content-visibility: hidden;
+    }
+    .header {
+        height: 90vh;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .header-h2:first-child{
+        left: 0;
+    }
+    .header-h2 {
+        width: fit-content;
+        font-size: 3.2rem;
+    }
+    .header-img {
+        width: 20rem;
+    }
+    .header-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    .text-light {
+        width: fit-content;
+        height: fit-content;
+        font-size: 1.4em;
+    }
+    .header-person {
+        align-items: center;
+        margin: 0;
+    }
+    .header-h2:first-child {
+        padding-right: 6rem;
+    }
+    .header-h2:nth-child(3) {
+        padding-left: 5rem;
+    }
+    .aboutme {
+        height: fit-content;
+    }
+    .aboutme-bg img{
+        content-visibility: hidden;
+    }
+    .aboutme-bg h2 {
+        content-visibility: hidden;
+    }
+    
+    .profile-pic div {
+        left: 0;
+        top: 0;
+    }
+    .rectangle1, .rectangle2, .rectangle3 {
+        width: 10rem;   
+        height: 10rem;
+    }
+    .aboutme-content {
+        flex-direction: column;
+    }
+    .aboutme-text {
+        width: auto;
+        margin-left: 0;
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutme-content {
+    }
+    .rectangle {
+        visibility: hidden;
+    }
+    .skills-press {
+        margin-left: 0;
+    }
+    .profile-pic div {
+        content-visibility: hidden;
+    }
+    .aboutme-text h2 {
+        font-size: 3rem;
+
+    }
+    .aboutme-text p {
+        font-size: 1.2rem;
+        margin-top: 0;
+        padding: 0 0 10px 0;
+        text-align: center;
+    }
+    .skills {
+        height: fit-content;
+        margin: 2rem 0;
+    }
+    .profile-pic div {
+        visibility: hidden;
+    }
+    .socials-bg h2 {
+        content-visibility: hidden;
+    }
+    .socials-content {
+        font-size: 0.8rem;
+        height: fit-content;
+        top: 0; 
+        margin-top: 4rem;
+    }
+    .socials-content h2 {
+        letter-spacing: 0.4rem;
+        padding: 2rem 0 2rem 0;
+    }
+    .socials-text {
+        margin: 2rem 0 3rem 0;
+    }
+    .rectangle-text {
+        visibility: hidden;
+    }
+    .socials {
+        height: fit-content ;
+    }
+    
 }
