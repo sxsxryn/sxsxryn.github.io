@@ -127,16 +127,18 @@ ul {
     background-color: var(--first-color);
     mix-blend-mode: difference;
     position: absolute;
-    right: -5px;
-    bottom: 0;
-    width: 3.2em;
-    height: 1.5em;
+    right: 0;
+    bottom: -.25em;
+    width: 2em;
     z-index: 8;
+    height: 0.8em;
     transition: all 0.5s ease-in-out;
 }
 
 .rectangle-text:hover {
-    width: 6.6em;
+    bottom: -.35em;
+    height: 0.90em;
+    width: 4.3em;
 }
 
 .rectangle1 {
@@ -411,6 +413,7 @@ ul {
         width: fit-content;
     }
     .profile-pic img {
+        border: 10px, solid, var(--first-color);
         margin-top: 2rem;
         height: 12rem;   
         left: 0;
@@ -459,11 +462,16 @@ ul {
         align-items: center;
         margin: 0;
     }
+    .header-img {
+        width: 22em;
+    }
+    .header-img:hover {
+        width: 20em;
+    }
     .header-h2:first-child {
-        padding-right: 6rem;
+        padding-right: 1.4em;
     }
     .header-h2:nth-child(3) {
-        padding-left: 5rem;
     }
     .aboutme {
         height: fit-content;
@@ -529,7 +537,9 @@ ul {
         font-size: 0.8rem;
         height: fit-content;
         top: 0; 
-        margin-top: 4rem;
+    }
+    .aboutme-content {
+        height: fit-content;
     }
     .socials-content h2 {
         letter-spacing: 0.4rem;
